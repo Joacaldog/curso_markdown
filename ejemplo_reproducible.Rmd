@@ -1,0 +1,27 @@
+---
+title: "exploracion_plantas_extintas"
+author: Joacaldito Raul
+output: html_document
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = TRUE, message=F, warning=F)
+library(tidyverse)
+library(kableExtra)
+```
+## Introduccion
+
+### De donde vienen los datos
+
+aca en este [link](www.google.cl) esta google
+
+```{r, echo=F}
+plants <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+actions <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/actions.csv")
+threats <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/threats.csv")
+
+```
+
+## Datos de sudamerica
+
+El numero de especies que hay en sudamerica en la base de datos plantas es de `r plants %>% dplyr::filter(continent == "South America") %>% nrow()` especies
