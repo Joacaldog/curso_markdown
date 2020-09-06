@@ -65,7 +65,6 @@ iris_con_NA[7,1] <- NA
 Iris_filtrado <- iris_con_NA %>% dplyr::filter_at(vars(Sepal.Length:Petal.Length), ~!is.na(.x))
 
 
-###FIN 
-
+###FIN
   
   
